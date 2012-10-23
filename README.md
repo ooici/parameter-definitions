@@ -12,6 +12,11 @@ Setup
 
 This should be a submodule in [coi-services](https://github.com/ooici/coi-services/).
 
+Running
+----
+
+This repository is intended to act as a set of parameter definition plugins for an ion capability container. It does not support functionality outside of this scope.
+
 Copying
 ------
 

@@ -1,4 +1,10 @@
 #!/usr/bin/env python
+'''
+@author Luke Campbell <LCampbell@ASAScience.com>
+@file extern/parameter-definitions/parameter_definitions/science/standard.py
+@date Tue Oct 23 16:12:58 EDT 2012
+@brief Plugin for loading the standard set of parameter definitions
+'''
 
 def load():
     from coverage_model.parameter import ParameterContext
@@ -129,3 +135,7 @@ def load():
     
     return contexts
     
+if __name__ == '__main__':
+    import sys
+    sys.stderr.write('This plugin is not meant to be run')
+
