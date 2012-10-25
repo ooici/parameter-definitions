@@ -58,7 +58,6 @@ def load():
     raw_ctxt = ParameterContext('raw', param_type=ArrayType())
     raw_ctxt.description = 'raw binary string values'
     raw_ctxt.uom = 'utf-8 byte string'
-    raw_ctxt.fill_value = 0x0
     contexts.append(raw_ctxt)
 
     port_ts_ctxt = ParameterContext(name='port_timestamp', param_type=QuantityType(value_encoding=np.float64))
@@ -97,13 +96,11 @@ def load():
 
     pref_ts_ctxt = ParameterContext(name='preferred_timestamp', param_type=ArrayType())
     pref_ts_ctxt.description = 'name of preferred timestamp'
-    pref_ts_ctxt.fill_value = None
     contexts.append(pref_ts_ctxt)
 
     # TODO: This should probably be of type CategoryType when implemented
     qual_flag_ctxt = ParameterContext(name='quality_flag', param_type=ArrayType())
     qual_flag_ctxt.description = 'flag indicating quality'
-    qual_flag_ctxt.fill_value = None
     contexts.append(qual_flag_ctxt)
 
     viz_ts_ctxt = ParameterContext(name='viz_timestamp', param_type=QuantityType(value_encoding=np.float64))
